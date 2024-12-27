@@ -1,4 +1,4 @@
-<h1>Implementing Port Security</h1>
+<h1>Implementing VLAN and Trunking</h1>
 
 <h2>Description</h2>
 This project involves configuring and verifing port security on a switch. Port security restricts port’s ingress traffic by limiting the MAC addresses that are allowed to send traffic into the port.
