@@ -1,7 +1,7 @@
 <h1>Implementing VLAN and Trunking</h1>
 
 <h2>Description</h2>
-This project involves configuring and verifing port security on a switch. Port security restricts port’s ingress traffic by limiting the MAC addresses that are allowed to send traffic into the port.
+This project involves the configuration and testing of VLANs and trunks on switches. 
 <br />
 
 
@@ -21,19 +21,20 @@ This project involves configuring and verifing port security on a switch. Port s
 <img src="https://imgur.com/2eVn2GF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/>
 
-- <b>Enabled port security on F0/1 and F0/2 on the switch and set the maximum devices that can access the ports to one so only PC 1 and PC 2 in our topology can access these ports.
-- Secure the ports so that the MAC address of a device is dynamically learned and added to the running configuration.
-- Set the violation mode so that the F0/1 and F0/2 are not disabled when a violation occurs, but a notification of the security violation is generated, and packets from the unknown source are dropped.
-- Disabled all the remaining unused ports:
+- <b>Configured eighteen VLANs on three switches and assigned ports to each VLAN
+
 <br/>
 <img src="https://imgur.com/9k1HCTt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Verify port security is enabled and the MAC addresses of PC1 and PC2 were added to the running configuration: <br/>
+- Configured virtual management interfaces on all three switches.
+- Configured the link between SWA and SWB as a static trunk: A trunk link allows multiple VLANs' traffic to traverse between switches, maintaining network segmentation while enabling communication between VLANs.
+- Configured the trunk with the native VLAN (100) and eliminate native VLAN conflicts: <br/>
 <img src="https://imgur.com/RREJ8BA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-A Rogue laptop was connected to port F0/2, this was flagged as a violation as only PC2 is allowed to connect to F0/2. Therefore, the rogue laptop could not ping PC1:  <br/>
+- Configure G0/2 on SWA so that it successfully negotiates trunking with SWC.
+- Configure the trunk with the native VLAN and eliminate native VLAN conflicts: <br/>
 <img src="https://imgur.com/t8yKBMS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br/>
